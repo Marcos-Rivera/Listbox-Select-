@@ -1,0 +1,239 @@
+/* Import Google Font - Poppins */
+/* ------------------------------------------------------ */
+/* reset */
+/* ------------------------------------------------------ */
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #111827;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+}
+
+.container {
+  position: relative;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin: 4em auto;
+  padding: 2em;
+  width: 40rem;
+  background: none;
+justify-content: center;
+align-items: center;
+  /* ------------------------------------------------------ */
+  /* wrapper background without pseudo element */
+  background: rgb(245, 158, 11);
+  background: linear-gradient(47deg, rgba(245, 158, 11, 1) 11%, rgba(249, 115, 22, 1) 100%);
+
+  /* box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);  */
+  /* ------------------------------------------------------ */
+}
+
+::selection {
+  color: #fff;
+  background: #4285f4;
+}
+
+.wrapper {
+  width: 28rem;
+  height: auto;
+  margin: px 20px;
+}
+
+.select-btn,
+li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #475569;
+}
+
+.select-btn,
+li:hover {
+  background: #FFEDD5;
+}
+
+li:hover {
+  color: #9A3412;
+}
+
+.select-btn {
+  height: 3.6rem;
+  padding: 0 20px;
+  font-weight: 500;
+  background: #fff;
+  border-radius: .4em;
+  justify-content: space-between;
+  box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.select-btn:hover {
+  color: #5c200d;  }
+
+.select-btn i {
+  font-size: 24px;
+  transition: transform 0.3s linear;
+}
+
+.wrapper.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+.content {
+  display: none;
+  padding: .8rem;
+  margin-top: .4em;
+  background: #fff;
+  border-radius: .4em;
+  box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+  height: auto;
+}
+
+.wrapper.active .content {
+  display: block;
+}
+
+.content .search {
+  position: relative;
+}
+
+.search i {
+  top: 50%;
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.search input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+  font-size: 1.4rem;
+}
+
+.search input:focus {
+  padding-left: 42px;
+  border: 2px solid #4285f4;
+}
+
+.search input:hover {
+  padding-left: 42px;
+  color: #3c3c3c;
+  border: 2px solid #4285f4;
+}
+
+.search input::placeholder {
+  color: #3c3c3c;
+}
+
+.content .options {
+  margin-top: 10px;
+  max-height: 170px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+
+.options::-webkit-scrollbar {
+  width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}
+
+.options li {
+  /* height: 40px; */
+  padding: .7em 13px;
+  font-size: 1.5rem;
+  margin: .2em 0;
+  color: #475569;
+}
+
+.options li:hover {
+  color: #5c200d;  background: #FFEDD5;
+}
+
+li:hover,
+li.selected {
+  border-radius: 5px;
+}
+
+.options li.selected {
+  border-radius: 5px;
+  color: #5c200d;
+    background: #FED7AA;
+}
+
+.options li.selected::before {
+  display: inline-block;
+  content: '\f00c';
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-weight: bold;
+  height: 16px;
+  line-height: 16px;
+  text-rendering: auto;
+  width: 16px;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 1em;
+  color: #D97706;
+}
